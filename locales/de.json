@@ -1,0 +1,69 @@
+{
+  "pair": {
+    "title": "DoorBird hinzuf\u00fcgen",
+    "nosettings": "Bitte alle felder ausf\u00fcllen.",
+    "unauthorized": "Fehler 401: dieser Benutzer ist nicht autorisiert, stellen Sie sicher, dass Sie den Benutzer in der App erstellt und die richtigen Details eingegeben haben.",
+    "servererror": "Fehler 500: interner Server-Fehler",
+    "timeout": "Timeout-Fehler: Stellen Sie sicher, dass Sie die richtige IP-Adresse eingegeben haben und dass die DoorBird online ist.",
+    "unknownerror": "Unbekannter fehler, sind Sie sicher, dass Sie die richtige IP-Adresse eingegeben haben und Homey im selben Netzwerk wie die DoorBird ist? Bitte \u00fcberpr\u00fcfen Sie Ihre Einstellungen und versuchen Sie es erneut.",
+    "intro": "Erstellen Sie einen neuen Benutzer in der DoorBird Smartphone-App. Geben Sie anschlie\u00dfend die IP-Adresse und die Details dieses Benutzers unten ein.",
+    "address": "IP Adresse",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "firmware": "DoorBird Firmware:",
+    "mac": "DoorBird MAC Adresse:",
+    "success": "DoorBird hinzugef\u00fcgt",
+    "test": "Test Verbindung",
+    "testing": "DoorBird Verbindungstest erfolgreich, k\u00f6nnen Sie nun die DoorBird verbinden.",
+    "connect": "Verbinden",
+    "titleselection": "What do you want to do?",
+    "nodevices": "No devices have been discovered. You can try again or use manual pairing if you know the IP address of your DoorBird device.",
+    "again": "Try Again",
+    "manual": "Manual Pairing",
+    "type": "DoorBird Type:",
+    "mac": "DoorBird MAC:",
+    "intro": "Enter the IP address, username and password for your DoorBird device.",
+    "title_http_callbacks": "Set notification schedule",
+    "intro_http_callbacks": "For DoorBird events to work with in Homey the DoorBird needs to be configured to send notifications for each event. Keeping this checkbox checked will update your DoorBird configuration by adding the notification URL's and setting a schedule to always send all events to Homey. If you previously configured HTTP events uncheck this to keep your current configuration, Homey wont be able to receive DoorBird events though.",
+    "next": "Next",
+    "http_callbacks": "Update DoorBird configuration",
+    "processing": "Notification schedule is being configured ..."
+  },
+  "settings": {
+    "title": "DoorBird einstellungen",
+    "intro-email": "Diese einstellungen sind notwendig f\u00fcr die Snapshot-Bilder per e-Mail senden. Wenn Sie e-mails \u00fcber Google Mail SMTP-Server senden m\u00f6chten, und Sie sind mit 2-Stufen-Authentifizierung m\u00fcssen Sie zuerst erstellen Sie eine <a href='https:\/\/support.google.com\/accounts\/answer\/185833' target='_blank'> app-Passwort <\/a> in Ihrem Google-Konto.",
+    "emailsettings": "E-mail einstellungen",
+    "username": "E-mail benutzername",
+    "password": "E-mail passwort",
+    "hostname": "SMTP Server",
+    "port": "SMTP port",
+    "sender": "Absender e-mail adresse",
+    "secure": "Verschl\u00fcsselte verbindung",
+    "testemail": "Test e-mail einstellungen",
+    "saveemail": "E-mail einstellungen speichern",
+    "testing": "Einstellungen wurden erfolgreich getestet. Sie sollten eine test e-mail erhalten haben.",
+    "success": "Einstellungen wurden erfolgreich gespeichert."
+  },
+  "util": {
+    "test_email_body_text": "Dies ist eine Test e-Mail best\u00e4tigt, dass Ihre e-Mail-Einstellungen in der heimeligen DoorBird App korrekt sind.",
+    "test_email_body_html": "<h1> DoorBird Homey App </h1> <p> Dies ist eine Test e-Mail best\u00e4tigt, Ihre e-Mail-Einstellungen in der heimeligen DoorBird App korrekt sind. <\/p>",
+    "email_snapshot_html": "<h1> DoorBird Homey App </h1> <p> dieser Momentaufnahme war am ",
+    "email_history_snapshot_html": "<h1>DoorBird Homey App - Geschichte Snapshot</h1><p>Das ist Geschichte Schnappschuss ",
+    "open_door": "Willst du dass ich die tür öffne",
+    "not_understand": "Ich habe dich nicht richtig verstanden, bitte versuch es nochmal.",
+    "relay_triggered": "OK, das türrelais wurde ausgelöst.",
+    "something_wrong": "Etwas ist schief gelaufen.",
+    "no_action_taken": "Es wurden keine Maßnahmen ergriffen.",
+    "inconclusive_response": "Inconclusive response"
+  },
+  "device": {
+    "incorrect_permissions": "Falsche Berechtigungen DoorBird-Benutzer.",
+    "live_snapshot": "Live Snapshot",
+    "latest_doorbell_snapshot": "Latest Doorbell Snapshot",
+    "latest_motionsensor_snapshot": "Latest Motionsensor Snapshot"
+  },
+  "driver": {
+    "401": "Login credentials are invalid, please try again with correct details"
+  }
+
+}

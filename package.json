@@ -1,0 +1,30 @@
+{
+  "name": "com.doorbird",
+  "version": "3.2.4",
+  "description": "Homey app for DoorBird Smart Doorbell",
+  "main": "app.js",
+  "dependencies": {
+    "homey-oauth2app": "^3.2.5",
+    "node-fetch": "^3.2.10",
+    "nodemailer": "^6.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jghaanstra/com.doorbird.git"
+  },
+  "keywords": [
+    "doorbird",
+    "homey",
+    "smart",
+    "doorbell"
+  ],
+  "author": "Jelger Haanstra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jghaanstra/com.doorbird/issues"
+  },
+  "homepage": "https://apps.athom.com/app/com.doorbird"
+}

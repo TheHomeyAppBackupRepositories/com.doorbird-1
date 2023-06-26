@@ -1,0 +1,81 @@
+{
+  "pair": {
+		"title": "Add DoorBird",
+    "nosettings": "Please fill in all the fields.",
+    "unauthorized": "Error 401: this user is not authorized, make sure you have created the user in the app and entered the correct details.",
+    "servererror": "Error 500: internal server error",
+    "timeout": "Timeout error: make sure you have entered the correct IP address and that the DoorBird is online.",
+    "unknownerror": "Unknown error, are you sure you have entered the correct IP address and Homey is on the same network as the DoorBird? Please check your settings and try again.",
+    "intro": "Create a new user in the DoorBird smartphone app. Then enter the IP address and the details of this user below.",
+    "address": "IP Address",
+    "username": "Username",
+    "password": "Password",
+    "firmware": "DoorBird Firmware:",
+    "mac": "DoorBird MAC Address:",
+    "success": "DoorBird added succesfully",
+    "test" : "Test Connection",
+    "testing" : "DoorBird connection test succesful, you can now connect the DoorBird.",
+    "connect": "Connect",
+    "titleselection": "What do you want to do?",
+    "nodevices": "No devices have been discovered. You can try again or use manual pairing if you know the IP address of your DoorBird device.",
+    "again": "Try Again",
+    "manual": "Manual Pairing",
+    "type": "DoorBird Type:",
+    "mac": "DoorBird MAC:",
+    "intro": "Enter the IP address, username and password for your DoorBird device.",
+    "title_http_callbacks": "Set notification schedule",
+    "intro_http_callbacks": "For DoorBird events to work with in Homey the DoorBird needs to be configured to send notifications for each event. Keeping this checkbox checked will update your DoorBird configuration by adding the notification URL's and setting a schedule to always send all events to Homey. If you previously configured HTTP events uncheck this to keep your current configuration, Homey wont be able to receive DoorBird events though.",
+    "next": "Next",
+    "http_callbacks": "Update DoorBird configuration",
+    "processing": "Notification schedule is being configured ..."
+	},
+  "settings": {
+    "title": "DoorBird Settings",
+    "intro-email": "These settings are needed for sending snapshot images through email. If you wish to send emails through Gmail SMTP servers and you are using 2-step authentication you first need to create an <a href='https://support.google.com/accounts/answer/185833' target='_blank'>app password</a> in your Google Account.",
+    "emailsettings": "Email Settings",
+    "username": "Email Username",
+    "password": "Email Password",
+    "hostname": "SMTP Server",
+    "port": "SMTP Port",
+    "sender": "Sender Email Address",
+    "secure": "Encrypted Connection",
+    "testemail": "Test Email Settings",
+    "saveemail": "Save Email Settings",
+    "testing": "Settings have been tested succesfully. You should have received a test email.",
+    "success": "Settings have been saved succesfully."
+  },
+  "util": {
+    "test_email_body_text": "This is a test email which confirms your email settings in the Homey DoorBird App are correct.",
+    "test_email_body_html": "<h1>Homey DoorBird App</h1><p>This is a test email which confirms your email settings in the Homey DoorBird App are correct.</p>",
+    "email_snapshot_html": "<h1>Homey DoorBird App</h1><p>This snapshot was taken at ",
+    "email_history_snapshot_html": "<h1>Homey DoorBird App - History Snapshot</h1><p>This is history snapshot ",
+    "open_door": "Do you want me to open the door?",
+    "not_understand": "I did not understand you correctly, please try again.",
+    "relay_triggered": "OK, the door relay has been triggered.",
+    "something_wrong": "Something went wrong.",
+    "no_action_taken": "No action has been taken.",
+    "inconclusive_response": "Inconclusive response",
+    "unauthorized": "Error 401: this user is not authorized, make sure you have created the user in the app and entered the correct details.",
+    "servererror": "Error 500: internal server error",
+    "timeout": "Timeout error: make sure you have a stable network connection with your DoorBird."
+  },
+  "device": {
+    "incorrect_permissions": "Incorrect permissions DoorBird user.",
+    "live_snapshot": "Live Snapshot",
+    "latest_doorbell_snapshot": "Latest Doorbell Snapshot",
+    "latest_motionsensor_snapshot": "Latest Motionsensor Snapshot"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
