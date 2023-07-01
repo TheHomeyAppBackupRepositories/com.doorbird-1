@@ -1,1 +1,1177 @@
-{"id":"com.doorbird","sdk":3,"brandColor":"#758ca6","name":{"en":"DoorBird","nl":"DoorBird","de":"DoorBird"},"tags":{"en":["smart doorbell","IP camera","DoorBird"],"nl":["slimme deurbel","IP camera","DoorBird"],"de":["intelligente türklingel","IP camera","DoorBird"]},"version":"3.2.4","compatibility":">=5.0.0","platforms":["local","cloud"],"author":{"name":"DoorBird GmbH"},"contributors":{"developers":[{"name":"Jelger Haanstra"}]},"bugs":{"url":"https://github.com/jghaanstra/com.doorbird/issues"},"homeyCommunityTopicId":115,"source":"https://github.com/jghaanstra/com.doorbird","homepage":"https://www.doorbird.com/","support":"https://community.athom.com/t/app-doorbird/115","images":{"small":"./assets/images/small.png","large":"./assets/images/large.png","xlarge":"./assets/images/xlarge.png"},"category":"appliances","description":{"en":"Answer your door anywhere","nl":"Beantwoord de deur overal","de":"Beantworten Sie Ihre Tür überall"},"dependencies":{"net":"*"},"api":{"testEmail":{"method":"put","path":"/testemail","public":false},"eventTrigger":{"method":"get","path":"/event/:event/:mac/:relay","public":true}},"discovery":{"doorbird":{"type":"mdns-sd","mdns-sd":{"name":"axis-video","protocol":"tcp"},"id":"{{txt.macaddress}}","conditions":[[{"field":"host","match":{"type":"regex","value":"^bha-"}}]]}},"capabilities":{"open_action":{"type":"number","title":{"en":"Trigger default relay (↑swipe up↑)","nl":"Trigger standaard relay (↑omhoog scrollen↑)","de":"Standardrelais auslösen (↑swipe up↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_2":{"type":"number","title":{"en":"Trigger second relay (↑swipe up↑)","nl":"Trigger tweede relay (↑omhoog scrollen↑)","de":"Zweiten relais auslösen (↑swipe up↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_3":{"type":"number","title":{"en":"Trigger third relay (↑swipe up↑)","nl":"Trigger derde relay (↑omhoog scrollen↑)","de":"Dritte relais auslösen (↑swipe up↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_4":{"type":"number","title":{"en":"Trigger fourth relay (↑swipe up↑)","nl":"Trigger vierde relay (↑omhoog scrollen↑)","de":"Vierte relais auslösen (↑swipe up↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_5":{"type":"number","title":{"en":"Trigger fifth relay (↑swipe up↑)","nl":"Trigger vijfde relay (↑omhoog scrollen↑)","de":"Fünfte relais auslösen (↑swipe up↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_6":{"type":"number","title":{"en":"Trigger sixth relay (↑swipe up↑)","nl":"Trigger zesde relay (↑omhoog scrollen↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_7":{"type":"number","title":{"en":"Trigger seventh relay (↑swipe up↑)","nl":"Trigger zevende relay (↑omhoog scrollen↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1},"open_action_8":{"type":"number","title":{"en":"Trigger eight relay (↑swipe up↑)","nl":"Trigger achtste relay (↑omhoog scrollen↑)"},"getable":true,"setable":true,"uiComponent":"slider","min":0,"max":1,"step":1}},"drivers":[{"id":"doorbird","name":{"en":"DoorBird","nl":"DoorBird","de":"DoorBird"},"images":{"small":"drivers/doorbird/assets/images/small.jpg","large":"drivers/doorbird/assets/images/large.jpg","xlarge":"drivers/doorbird/assets/images/xlarge.jpg"},"class":"doorbell","capabilities":["open_action","open_action_2","alarm_generic","alarm_motion","button.notificationevents","button.removenotificationevents"],"capabilitiesOptions":{"button.notificationevents":{"maintenanceAction":true,"title":{"en":"Set URL's for notifications","nl":"Instellen URL's voor notificaties"},"desc":{"en":"Use this option to add notification URLs to your DoorBird for use with trigger cards like doorbell and motion events.","nl":"Gebruik deze optie om notificatie URL's toe te voegen aan jouw DoorBird, deze worden gebruikt voor trigger cards zoals deurbel en bewegings acties."}},"button.removenotificationevents":{"maintenanceAction":true,"title":{"en":"Remove notification URL's","nl":"Verwijderen notificatie URL's"},"desc":{"en":"Use this option to remove notification URLs from your DoorBird.","nl":"Gebruik deze optie om notificatie URL's te verwijderen voor jouw DoorBird."}}},"gtin":["4260423860001"],"pair":[{"id":"list_devices","template":"list_devices","options":{"singular":true},"navigation":{"next":"login_credentials"}},{"id":"login_credentials","template":"login_credentials","options":{"logo":"../assets/doorbird-logo.png"},"navigation":{"next":"http_callbacks"}},{"id":"http_callbacks"},{"id":"add_device"},{"id":"select_pairing"},{"id":"manual_pairing"}],"settings":[{"type":"group","label":{"en":"DoorBird settings","nl":"DoorBird settings","de":"DoorBird einstellungen"},"children":[{"id":"address","type":"text","value":"0.0.0.0","label":{"en":"IP Address","nl":"IP Adres","de":"IP Adresse"}},{"id":"username","type":"text","value":"","label":{"en":"Username","nl":"Gebruikersnaam","de":"Benutzername"}},{"id":"password","type":"password","value":"","label":{"en":"Password","nl":"Wachtwoord","de":"Passwort"}}]}],"platforms":["local"],"connectivity":["lan"]},{"id":"doorbird_cloud","name":{"en":"DoorBird Cloud","nl":"DoorBird Cloud","de":"DoorBird Cloud"},"images":{"small":"drivers/doorbird_cloud/assets/images/small.jpg","large":"drivers/doorbird_cloud/assets/images/large.jpg","xlarge":"drivers/doorbird_cloud/assets/images/xlarge.jpg"},"class":"doorbell","capabilities":["open_action","open_action_2","alarm_generic","alarm_motion","button.notificationevents","button.removenotificationevents"],"capabilitiesOptions":{"button.notificationevents":{"maintenanceAction":true,"title":{"en":"Set URL's for notifications","nl":"Instellen URL's voor notificaties"},"desc":{"en":"Use this option to add notification URLs to your DoorBird for use with trigger cards like doorbell and motion events.","nl":"Gebruik deze optie om notificatie URL's toe te voegen aan jouw DoorBird, deze worden gebruikt voor trigger cards zoals deurbel en bewegings acties."}},"button.removenotificationevents":{"maintenanceAction":true,"title":{"en":"Remove notification URL's","nl":"Verwijderen notificatie URL's"},"desc":{"en":"Use this option to remove notification URLs from your DoorBird.","nl":"Gebruik deze optie om notificatie URL's te verwijderen voor jouw DoorBird."}}},"pair":[{"id":"login_oauth2","template":"login_oauth2","options":{"hint":"Log in with the DoorBird admin account in the new window.","button":"Log In"}},{"id":"list_devices","template":"list_devices","options":{"singular":true},"navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}],"repair":[{"id":"login_oauth2","template":"login_oauth2"}],"platforms":["cloud"],"connectivity":["cloud"]}],"flow":{"triggers":[{"id":"doorbell","title":{"en":"The doorbell rings","nl":"Er is aangebeld","de":"Die türklingel hat geläutet"},"hint":{"en":"Trigger a flow when somebody rings your DoorBird.","nl":"Trigger een flow wanneer iemand aanbelt via je DoorBird.","de":"Triggert einen flow wenn jemand klingelt Ihr DoorBird."},"tokens":[{"name":"snapshot","type":"image","title":{"en":"snapshot","nl":"snapshot","de":"snapshot"}}],"args":[{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}],"platforms":["local","cloud"]},{"id":"motionsensor","title":{"en":"Motion is detected","nl":"Beweging is gedetecteerd","de":"Bewegung is erkennt"},"hint":{"en":"Trigger a flow when your DoorBird detects motion.","nl":"Trigger een flow wanneer je DoorBird beweging detecteert.","de":"Triggert einen flow wenn Ihr DoorBird bewegung erkennt."},"tokens":[{"name":"snapshot","type":"image","title":{"en":"snapshot","nl":"snapshot","de":"snapshot"}}],"args":[{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}],"platforms":["local","cloud"]},{"id":"dooropen","title":{"en":"The door is opened","nl":"De deur is geopend","de":"Die tür ist geöffnet"},"hint":{"en":"Trigger a flow when the door opener relay of your DoorBird is energized.","nl":"Trigger een flow wanneer de deur opener relais van je DoorBird is geactiveerd.","de":"Triggert einen flow wenn das türöffnerrelais Ihrer DoorBird aktiviert ist."},"tokens":[{"name":"relay","type":"string","title":{"en":"Relay","nl":"Relais"},"example":{"en":"1","nl":"1"}}],"args":[{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}],"platforms":["local","cloud"]}],"actions":[{"id":"emailsnapshot","title":{"en":"Email a live snapshot","nl":"Email een live snapshot","de":"Email ein live schnappschuss"},"titleFormatted":{"en":"Email live snapshot to [[mailto]]","nl":"Email live snapshot naar [[mailto]]","de":"Email live schnappschuss zum [[mailto]]"},"hint":{"en":"Take a snapshot and send it with email (make sure email is configured in the app settings).","nl":"Maak een  snapshot en verstuur deze per email (zorg ervoor dat email is geconfigureerd in de app instellingen).","de":"Nehmen Sie einen schnappschuss und senden Sie ihn per e-mail (stellen Sie sicher, dass die e-mail in den app einstellungen konfiguriert ist)."},"args":[{"name":"mailto","type":"text","title":{"en":"Send mail to","nl":"Verstuur mail aan","de":"Mail schicken an"},"placeholder":{"en":"Send mail to","nl":"Verstuur mail aan","de":"Mail schicken an"}},{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird"}],"platforms":["local"]},{"id":"emailsnapshothistory","title":{"en":"Email a history snapshot","nl":"Email een geschiedenis snapshot","de":"Email ein geschichte schnappschuss"},"titleFormatted":{"en":"Email history snapshot [[history]] from [[source]] to [[mailto]]","nl":"Email geschiedenis snapshot [[history]] van [[source]] naar [[mailto]]","de":"Email geschichte schnappschuss [[history]] von [[source]] zum [[mailto]]"},"hint":{"en":"Send a history snapshot with email (make sure email is configured in the app settings).","nl":"Verstuur een geschiedenis snapshot per email (zorg ervoor dat email is geconfigureerd in de app instellingen).","de":"Senden einen geschichte schnappschuss per e-mail (stellen Sie sicher, dass die e-mail in den app einstellungen konfiguriert ist)."},"args":[{"name":"source","type":"dropdown","title":{"en":"Event","nl":"Gebeurtenis"},"values":[{"id":"doorbell","label":{"en":"Doorbell","nl":"Deurbel","de":"Türklingel"}},{"id":"motionsensor","label":{"en":"Motionsensor","nl":"Bewegingssensor","de":"Bewegungssensor"}}]},{"name":"history","type":"dropdown","title":{"en":"History","nl":"Geschiedenis"},"values":[{"id":"1","label":{"en":"01 (latest)","nl":"01 (nieuwste)","de":"01 (neueste)"}},{"id":"2","label":{"en":"02","nl":"02","de":"02"}},{"id":"3","label":{"en":"03","nl":"03","de":"03"}},{"id":"4","label":{"en":"04","nl":"04","de":"04"}},{"id":"5","label":{"en":"05","nl":"05","de":"05"}},{"id":"6","label":{"en":"06","nl":"06","de":"06"}},{"id":"7","label":{"en":"07","nl":"07","de":"07"}},{"id":"8","label":{"en":"08","nl":"08","de":"08"}},{"id":"9","label":{"en":"09","nl":"09","de":"09"}},{"id":"10","label":{"en":"10","nl":"10","de":"10"}},{"id":"11","label":{"en":"11","nl":"11","de":"11"}},{"id":"12","label":{"en":"12","nl":"12","de":"12"}},{"id":"13","label":{"en":"13","nl":"13","de":"13"}},{"id":"14","label":{"en":"14","nl":"14","de":"14"}},{"id":"15","label":{"en":"15","nl":"15","de":"15"}},{"id":"16","label":{"en":"16","nl":"16","de":"16"}},{"id":"17","label":{"en":"17","nl":"17","de":"17"}},{"id":"18","label":{"en":"18","nl":"18","de":"18"}},{"id":"19","label":{"en":"19","nl":"19","de":"19"}},{"id":"20","label":{"en":"20","nl":"20","de":"20"}},{"id":"21","label":{"en":"21","nl":"21","de":"21"}},{"id":"22","label":{"en":"22","nl":"22","de":"22"}},{"id":"23","label":{"en":"23","nl":"23","de":"23"}},{"id":"24","label":{"en":"24","nl":"24","de":"24"}},{"id":"25","label":{"en":"25","nl":"25","de":"25"}},{"id":"26","label":{"en":"26","nl":"26","de":"26"}},{"id":"27","label":{"en":"27","nl":"27","de":"27"}},{"id":"28","label":{"en":"28","nl":"28","de":"28"}},{"id":"29","label":{"en":"29","nl":"29","de":"29"}},{"id":"30","label":{"en":"30","nl":"30","de":"30"}},{"id":"31","label":{"en":"31","nl":"31","de":"31"}},{"id":"32","label":{"en":"32","nl":"32","de":"32"}},{"id":"33","label":{"en":"33","nl":"33","de":"33"}},{"id":"34","label":{"en":"34","nl":"34","de":"34"}},{"id":"35","label":{"en":"35","nl":"35","de":"35"}},{"id":"36","label":{"en":"36","nl":"36","de":"36"}},{"id":"37","label":{"en":"37","nl":"37","de":"37"}},{"id":"38","label":{"en":"38","nl":"38","de":"38"}},{"id":"39","label":{"en":"39","nl":"39","de":"39"}},{"id":"40","label":{"en":"40","nl":"40","de":"40"}},{"id":"41","label":{"en":"41","nl":"41","de":"41"}},{"id":"42","label":{"en":"42","nl":"42","de":"42"}},{"id":"43","label":{"en":"43","nl":"43","de":"43"}},{"id":"44","label":{"en":"44","nl":"44","de":"44"}},{"id":"45","label":{"en":"45","nl":"45","de":"45"}},{"id":"46","label":{"en":"46","nl":"46","de":"46"}},{"id":"47","label":{"en":"47","nl":"47","de":"47"}},{"id":"48","label":{"en":"48","nl":"48","de":"48"}},{"id":"49","label":{"en":"49","nl":"49","de":"49"}},{"id":"50","label":{"en":"50 (oldest)","nl":"50 (oudste)","de":"50 (älteste)"}}]},{"name":"mailto","type":"text","title":{"en":"Send mail to","nl":"Verstuur mail aan","de":"Mail schicken an"},"placeholder":{"en":"Send mail to","nl":"Verstuur mail aan","de":"Mail an schicken"}},{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird"}],"platforms":["local"]},{"id":"light","title":{"en":"Turn on IR light","nl":"IR licht aanzetten","de":"IR licht einschalten"},"hint":{"en":"Turn on the infrared light of your DoorBird for 3 minutes.","nl":"Zet het infrarood licht van je DoorBird aan voor 3 minuten.","de":"Schalten Sie das Infrarotlicht Ihrer DoorBird für 3 Minuten ein."},"args":[{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}],"platforms":["local","cloud"]},{"id":"restart","title":{"en":"Restart","nl":"Herstarten","de":"Neu starten"},"args":[{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}],"platforms":["local","cloud"]},{"id":"door","title":{"en":"Open the door","nl":"Open de deur","de":"Öffne die tür"},"hint":{"en":"Open a connected door opener through the door opener / alarm output relay of the DoorBird.","nl":"Open een verbonden deur opener via de deur opener / alarm relais van de DoorBird.","de":"Öffnen Sie einen angeschlossenen türöffner über das Türöffner- / Alarmausgangsrelais der DoorBird."},"titleFormatted":{"en":"Open the door with relay [[relay]]","nl":"Open de deur met relay [[relay]]","de":"Öffne die tür mit relay [[relay]]"},"args":[{"type":"autocomplete","name":"relay","title":{"en":"Select Relay","nl":"Selecteer relais"},"placeholder":{"en":"Select relay ...","nl":"Selecteer relais ..."}},{"name":"device","type":"device","placeholder":{"en":"Select DoorBird","nl":"Selecteer DoorBird","de":"DoorBird wählen"},"filter":"driver_id=doorbird|doorbird_cloud"}]}]}}
+{
+  "id": "com.doorbird",
+  "sdk": 3,
+  "brandColor": "#758ca6",
+  "name": {
+    "en": "DoorBird",
+    "nl": "DoorBird",
+    "de": "DoorBird"
+  },
+  "tags": {
+    "en": [
+      "smart doorbell",
+      "IP camera",
+      "DoorBird"
+    ],
+    "nl": [
+      "slimme deurbel",
+      "IP camera",
+      "DoorBird"
+    ],
+    "de": [
+      "intelligente türklingel",
+      "IP camera",
+      "DoorBird"
+    ]
+  },
+  "version": "3.2.4",
+  "compatibility": ">=5.0.0",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "author": {
+    "name": "DoorBird GmbH"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Jelger Haanstra"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/jghaanstra/com.doorbird/issues"
+  },
+  "homeyCommunityTopicId": 115,
+  "source": "https://github.com/jghaanstra/com.doorbird",
+  "homepage": "https://www.doorbird.com/",
+  "support": "https://community.athom.com/t/app-doorbird/115",
+  "images": {
+    "small": "./assets/images/small.png",
+    "large": "./assets/images/large.png",
+    "xlarge": "./assets/images/xlarge.png"
+  },
+  "category": "appliances",
+  "description": {
+    "en": "Answer your door anywhere",
+    "nl": "Beantwoord de deur overal",
+    "de": "Beantworten Sie Ihre Tür überall"
+  },
+  "dependencies": {
+    "net": "*"
+  },
+  "api": {
+    "testEmail": {
+      "method": "put",
+      "path": "/testemail",
+      "public": false
+    },
+    "eventTrigger": {
+      "method": "get",
+      "path": "/event/:event/:mac/:relay",
+      "public": true
+    }
+  },
+  "discovery": {
+    "doorbird": {
+      "type": "mdns-sd",
+      "mdns-sd": {
+        "name": "axis-video",
+        "protocol": "tcp"
+      },
+      "id": "{{txt.macaddress}}",
+      "conditions": [
+        [
+          {
+            "field": "host",
+            "match": {
+              "type": "regex",
+              "value": "^bha-"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "capabilities": {
+    "open_action": {
+      "type": "number",
+      "title": {
+        "en": "Trigger default relay (↑swipe up↑)",
+        "nl": "Trigger standaard relay (↑omhoog scrollen↑)",
+        "de": "Standardrelais auslösen (↑swipe up↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_2": {
+      "type": "number",
+      "title": {
+        "en": "Trigger second relay (↑swipe up↑)",
+        "nl": "Trigger tweede relay (↑omhoog scrollen↑)",
+        "de": "Zweiten relais auslösen (↑swipe up↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_3": {
+      "type": "number",
+      "title": {
+        "en": "Trigger third relay (↑swipe up↑)",
+        "nl": "Trigger derde relay (↑omhoog scrollen↑)",
+        "de": "Dritte relais auslösen (↑swipe up↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_4": {
+      "type": "number",
+      "title": {
+        "en": "Trigger fourth relay (↑swipe up↑)",
+        "nl": "Trigger vierde relay (↑omhoog scrollen↑)",
+        "de": "Vierte relais auslösen (↑swipe up↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_5": {
+      "type": "number",
+      "title": {
+        "en": "Trigger fifth relay (↑swipe up↑)",
+        "nl": "Trigger vijfde relay (↑omhoog scrollen↑)",
+        "de": "Fünfte relais auslösen (↑swipe up↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_6": {
+      "type": "number",
+      "title": {
+        "en": "Trigger sixth relay (↑swipe up↑)",
+        "nl": "Trigger zesde relay (↑omhoog scrollen↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_7": {
+      "type": "number",
+      "title": {
+        "en": "Trigger seventh relay (↑swipe up↑)",
+        "nl": "Trigger zevende relay (↑omhoog scrollen↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    },
+    "open_action_8": {
+      "type": "number",
+      "title": {
+        "en": "Trigger eight relay (↑swipe up↑)",
+        "nl": "Trigger achtste relay (↑omhoog scrollen↑)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1
+    }
+  },
+  "drivers": [
+    {
+      "id": "doorbird",
+      "name": {
+        "en": "DoorBird",
+        "nl": "DoorBird",
+        "de": "DoorBird"
+      },
+      "images": {
+        "small": "drivers/doorbird/assets/images/small.jpg",
+        "large": "drivers/doorbird/assets/images/large.jpg",
+        "xlarge": "drivers/doorbird/assets/images/xlarge.jpg"
+      },
+      "class": "doorbell",
+      "capabilities": [
+        "open_action",
+        "open_action_2",
+        "alarm_generic",
+        "alarm_motion",
+        "button.notificationevents",
+        "button.removenotificationevents"
+      ],
+      "capabilitiesOptions": {
+        "button.notificationevents": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Set URL's for notifications",
+            "nl": "Instellen URL's voor notificaties"
+          },
+          "desc": {
+            "en": "Use this option to add notification URLs to your DoorBird for use with trigger cards like doorbell and motion events.",
+            "nl": "Gebruik deze optie om notificatie URL's toe te voegen aan jouw DoorBird, deze worden gebruikt voor trigger cards zoals deurbel en bewegings acties."
+          }
+        },
+        "button.removenotificationevents": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Remove notification URL's",
+            "nl": "Verwijderen notificatie URL's"
+          },
+          "desc": {
+            "en": "Use this option to remove notification URLs from your DoorBird.",
+            "nl": "Gebruik deze optie om notificatie URL's te verwijderen voor jouw DoorBird."
+          }
+        }
+      },
+      "gtin": [
+        "4260423860001"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "login_credentials"
+          }
+        },
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "../assets/doorbird-logo.png"
+          },
+          "navigation": {
+            "next": "http_callbacks"
+          }
+        },
+        {
+          "id": "http_callbacks"
+        },
+        {
+          "id": "add_device"
+        },
+        {
+          "id": "select_pairing"
+        },
+        {
+          "id": "manual_pairing"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "DoorBird settings",
+            "nl": "DoorBird settings",
+            "de": "DoorBird einstellungen"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "value": "0.0.0.0",
+              "label": {
+                "en": "IP Address",
+                "nl": "IP Adres",
+                "de": "IP Adresse"
+              }
+            },
+            {
+              "id": "username",
+              "type": "text",
+              "value": "",
+              "label": {
+                "en": "Username",
+                "nl": "Gebruikersnaam",
+                "de": "Benutzername"
+              }
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "value": "",
+              "label": {
+                "en": "Password",
+                "nl": "Wachtwoord",
+                "de": "Passwort"
+              }
+            }
+          ]
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ]
+    },
+    {
+      "id": "doorbird_cloud",
+      "name": {
+        "en": "DoorBird Cloud",
+        "nl": "DoorBird Cloud",
+        "de": "DoorBird Cloud"
+      },
+      "images": {
+        "small": "drivers/doorbird_cloud/assets/images/small.jpg",
+        "large": "drivers/doorbird_cloud/assets/images/large.jpg",
+        "xlarge": "drivers/doorbird_cloud/assets/images/xlarge.jpg"
+      },
+      "class": "doorbell",
+      "capabilities": [
+        "open_action",
+        "open_action_2",
+        "alarm_generic",
+        "alarm_motion",
+        "button.notificationevents",
+        "button.removenotificationevents"
+      ],
+      "capabilitiesOptions": {
+        "button.notificationevents": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Set URL's for notifications",
+            "nl": "Instellen URL's voor notificaties"
+          },
+          "desc": {
+            "en": "Use this option to add notification URLs to your DoorBird for use with trigger cards like doorbell and motion events.",
+            "nl": "Gebruik deze optie om notificatie URL's toe te voegen aan jouw DoorBird, deze worden gebruikt voor trigger cards zoals deurbel en bewegings acties."
+          }
+        },
+        "button.removenotificationevents": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Remove notification URL's",
+            "nl": "Verwijderen notificatie URL's"
+          },
+          "desc": {
+            "en": "Use this option to remove notification URLs from your DoorBird.",
+            "nl": "Gebruik deze optie om notificatie URL's te verwijderen voor jouw DoorBird."
+          }
+        }
+      },
+      "pair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2",
+          "options": {
+            "hint": "Log in with the DoorBird admin account in the new window.",
+            "button": "Log In"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        }
+      ],
+      "platforms": [
+        "cloud"
+      ],
+      "connectivity": [
+        "cloud"
+      ]
+    }
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "doorbell",
+        "title": {
+          "en": "The doorbell rings",
+          "nl": "Er is aangebeld",
+          "de": "Die türklingel hat geläutet"
+        },
+        "hint": {
+          "en": "Trigger a flow when somebody rings your DoorBird.",
+          "nl": "Trigger een flow wanneer iemand aanbelt via je DoorBird.",
+          "de": "Triggert einen flow wenn jemand klingelt Ihr DoorBird."
+        },
+        "tokens": [
+          {
+            "name": "snapshot",
+            "type": "image",
+            "title": {
+              "en": "snapshot",
+              "nl": "snapshot",
+              "de": "snapshot"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ],
+        "platforms": [
+          "local",
+          "cloud"
+        ]
+      },
+      {
+        "id": "motionsensor",
+        "title": {
+          "en": "Motion is detected",
+          "nl": "Beweging is gedetecteerd",
+          "de": "Bewegung is erkennt"
+        },
+        "hint": {
+          "en": "Trigger a flow when your DoorBird detects motion.",
+          "nl": "Trigger een flow wanneer je DoorBird beweging detecteert.",
+          "de": "Triggert einen flow wenn Ihr DoorBird bewegung erkennt."
+        },
+        "tokens": [
+          {
+            "name": "snapshot",
+            "type": "image",
+            "title": {
+              "en": "snapshot",
+              "nl": "snapshot",
+              "de": "snapshot"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ],
+        "platforms": [
+          "local",
+          "cloud"
+        ]
+      },
+      {
+        "id": "dooropen",
+        "title": {
+          "en": "The door is opened",
+          "nl": "De deur is geopend",
+          "de": "Die tür ist geöffnet"
+        },
+        "hint": {
+          "en": "Trigger a flow when the door opener relay of your DoorBird is energized.",
+          "nl": "Trigger een flow wanneer de deur opener relais van je DoorBird is geactiveerd.",
+          "de": "Triggert einen flow wenn das türöffnerrelais Ihrer DoorBird aktiviert ist."
+        },
+        "tokens": [
+          {
+            "name": "relay",
+            "type": "string",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "example": {
+              "en": "1",
+              "nl": "1"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ],
+        "platforms": [
+          "local",
+          "cloud"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "emailsnapshot",
+        "title": {
+          "en": "Email a live snapshot",
+          "nl": "Email een live snapshot",
+          "de": "Email ein live schnappschuss"
+        },
+        "titleFormatted": {
+          "en": "Email live snapshot to [[mailto]]",
+          "nl": "Email live snapshot naar [[mailto]]",
+          "de": "Email live schnappschuss zum [[mailto]]"
+        },
+        "hint": {
+          "en": "Take a snapshot and send it with email (make sure email is configured in the app settings).",
+          "nl": "Maak een  snapshot en verstuur deze per email (zorg ervoor dat email is geconfigureerd in de app instellingen).",
+          "de": "Nehmen Sie einen schnappschuss und senden Sie ihn per e-mail (stellen Sie sicher, dass die e-mail in den app einstellungen konfiguriert ist)."
+        },
+        "args": [
+          {
+            "name": "mailto",
+            "type": "text",
+            "title": {
+              "en": "Send mail to",
+              "nl": "Verstuur mail aan",
+              "de": "Mail schicken an"
+            },
+            "placeholder": {
+              "en": "Send mail to",
+              "nl": "Verstuur mail aan",
+              "de": "Mail schicken an"
+            }
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird"
+          }
+        ],
+        "platforms": [
+          "local"
+        ]
+      },
+      {
+        "id": "emailsnapshothistory",
+        "title": {
+          "en": "Email a history snapshot",
+          "nl": "Email een geschiedenis snapshot",
+          "de": "Email ein geschichte schnappschuss"
+        },
+        "titleFormatted": {
+          "en": "Email history snapshot [[history]] from [[source]] to [[mailto]]",
+          "nl": "Email geschiedenis snapshot [[history]] van [[source]] naar [[mailto]]",
+          "de": "Email geschichte schnappschuss [[history]] von [[source]] zum [[mailto]]"
+        },
+        "hint": {
+          "en": "Send a history snapshot with email (make sure email is configured in the app settings).",
+          "nl": "Verstuur een geschiedenis snapshot per email (zorg ervoor dat email is geconfigureerd in de app instellingen).",
+          "de": "Senden einen geschichte schnappschuss per e-mail (stellen Sie sicher, dass die e-mail in den app einstellungen konfiguriert ist)."
+        },
+        "args": [
+          {
+            "name": "source",
+            "type": "dropdown",
+            "title": {
+              "en": "Event",
+              "nl": "Gebeurtenis"
+            },
+            "values": [
+              {
+                "id": "doorbell",
+                "label": {
+                  "en": "Doorbell",
+                  "nl": "Deurbel",
+                  "de": "Türklingel"
+                }
+              },
+              {
+                "id": "motionsensor",
+                "label": {
+                  "en": "Motionsensor",
+                  "nl": "Bewegingssensor",
+                  "de": "Bewegungssensor"
+                }
+              }
+            ]
+          },
+          {
+            "name": "history",
+            "type": "dropdown",
+            "title": {
+              "en": "History",
+              "nl": "Geschiedenis"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "01 (latest)",
+                  "nl": "01 (nieuwste)",
+                  "de": "01 (neueste)"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "02",
+                  "nl": "02",
+                  "de": "02"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "03",
+                  "nl": "03",
+                  "de": "03"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "04",
+                  "nl": "04",
+                  "de": "04"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "05",
+                  "nl": "05",
+                  "de": "05"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "06",
+                  "nl": "06",
+                  "de": "06"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "07",
+                  "nl": "07",
+                  "de": "07"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "08",
+                  "nl": "08",
+                  "de": "08"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "09",
+                  "nl": "09",
+                  "de": "09"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "10",
+                  "nl": "10",
+                  "de": "10"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "11",
+                  "nl": "11",
+                  "de": "11"
+                }
+              },
+              {
+                "id": "12",
+                "label": {
+                  "en": "12",
+                  "nl": "12",
+                  "de": "12"
+                }
+              },
+              {
+                "id": "13",
+                "label": {
+                  "en": "13",
+                  "nl": "13",
+                  "de": "13"
+                }
+              },
+              {
+                "id": "14",
+                "label": {
+                  "en": "14",
+                  "nl": "14",
+                  "de": "14"
+                }
+              },
+              {
+                "id": "15",
+                "label": {
+                  "en": "15",
+                  "nl": "15",
+                  "de": "15"
+                }
+              },
+              {
+                "id": "16",
+                "label": {
+                  "en": "16",
+                  "nl": "16",
+                  "de": "16"
+                }
+              },
+              {
+                "id": "17",
+                "label": {
+                  "en": "17",
+                  "nl": "17",
+                  "de": "17"
+                }
+              },
+              {
+                "id": "18",
+                "label": {
+                  "en": "18",
+                  "nl": "18",
+                  "de": "18"
+                }
+              },
+              {
+                "id": "19",
+                "label": {
+                  "en": "19",
+                  "nl": "19",
+                  "de": "19"
+                }
+              },
+              {
+                "id": "20",
+                "label": {
+                  "en": "20",
+                  "nl": "20",
+                  "de": "20"
+                }
+              },
+              {
+                "id": "21",
+                "label": {
+                  "en": "21",
+                  "nl": "21",
+                  "de": "21"
+                }
+              },
+              {
+                "id": "22",
+                "label": {
+                  "en": "22",
+                  "nl": "22",
+                  "de": "22"
+                }
+              },
+              {
+                "id": "23",
+                "label": {
+                  "en": "23",
+                  "nl": "23",
+                  "de": "23"
+                }
+              },
+              {
+                "id": "24",
+                "label": {
+                  "en": "24",
+                  "nl": "24",
+                  "de": "24"
+                }
+              },
+              {
+                "id": "25",
+                "label": {
+                  "en": "25",
+                  "nl": "25",
+                  "de": "25"
+                }
+              },
+              {
+                "id": "26",
+                "label": {
+                  "en": "26",
+                  "nl": "26",
+                  "de": "26"
+                }
+              },
+              {
+                "id": "27",
+                "label": {
+                  "en": "27",
+                  "nl": "27",
+                  "de": "27"
+                }
+              },
+              {
+                "id": "28",
+                "label": {
+                  "en": "28",
+                  "nl": "28",
+                  "de": "28"
+                }
+              },
+              {
+                "id": "29",
+                "label": {
+                  "en": "29",
+                  "nl": "29",
+                  "de": "29"
+                }
+              },
+              {
+                "id": "30",
+                "label": {
+                  "en": "30",
+                  "nl": "30",
+                  "de": "30"
+                }
+              },
+              {
+                "id": "31",
+                "label": {
+                  "en": "31",
+                  "nl": "31",
+                  "de": "31"
+                }
+              },
+              {
+                "id": "32",
+                "label": {
+                  "en": "32",
+                  "nl": "32",
+                  "de": "32"
+                }
+              },
+              {
+                "id": "33",
+                "label": {
+                  "en": "33",
+                  "nl": "33",
+                  "de": "33"
+                }
+              },
+              {
+                "id": "34",
+                "label": {
+                  "en": "34",
+                  "nl": "34",
+                  "de": "34"
+                }
+              },
+              {
+                "id": "35",
+                "label": {
+                  "en": "35",
+                  "nl": "35",
+                  "de": "35"
+                }
+              },
+              {
+                "id": "36",
+                "label": {
+                  "en": "36",
+                  "nl": "36",
+                  "de": "36"
+                }
+              },
+              {
+                "id": "37",
+                "label": {
+                  "en": "37",
+                  "nl": "37",
+                  "de": "37"
+                }
+              },
+              {
+                "id": "38",
+                "label": {
+                  "en": "38",
+                  "nl": "38",
+                  "de": "38"
+                }
+              },
+              {
+                "id": "39",
+                "label": {
+                  "en": "39",
+                  "nl": "39",
+                  "de": "39"
+                }
+              },
+              {
+                "id": "40",
+                "label": {
+                  "en": "40",
+                  "nl": "40",
+                  "de": "40"
+                }
+              },
+              {
+                "id": "41",
+                "label": {
+                  "en": "41",
+                  "nl": "41",
+                  "de": "41"
+                }
+              },
+              {
+                "id": "42",
+                "label": {
+                  "en": "42",
+                  "nl": "42",
+                  "de": "42"
+                }
+              },
+              {
+                "id": "43",
+                "label": {
+                  "en": "43",
+                  "nl": "43",
+                  "de": "43"
+                }
+              },
+              {
+                "id": "44",
+                "label": {
+                  "en": "44",
+                  "nl": "44",
+                  "de": "44"
+                }
+              },
+              {
+                "id": "45",
+                "label": {
+                  "en": "45",
+                  "nl": "45",
+                  "de": "45"
+                }
+              },
+              {
+                "id": "46",
+                "label": {
+                  "en": "46",
+                  "nl": "46",
+                  "de": "46"
+                }
+              },
+              {
+                "id": "47",
+                "label": {
+                  "en": "47",
+                  "nl": "47",
+                  "de": "47"
+                }
+              },
+              {
+                "id": "48",
+                "label": {
+                  "en": "48",
+                  "nl": "48",
+                  "de": "48"
+                }
+              },
+              {
+                "id": "49",
+                "label": {
+                  "en": "49",
+                  "nl": "49",
+                  "de": "49"
+                }
+              },
+              {
+                "id": "50",
+                "label": {
+                  "en": "50 (oldest)",
+                  "nl": "50 (oudste)",
+                  "de": "50 (älteste)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "mailto",
+            "type": "text",
+            "title": {
+              "en": "Send mail to",
+              "nl": "Verstuur mail aan",
+              "de": "Mail schicken an"
+            },
+            "placeholder": {
+              "en": "Send mail to",
+              "nl": "Verstuur mail aan",
+              "de": "Mail an schicken"
+            }
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird"
+          }
+        ],
+        "platforms": [
+          "local"
+        ]
+      },
+      {
+        "id": "light",
+        "title": {
+          "en": "Turn on IR light",
+          "nl": "IR licht aanzetten",
+          "de": "IR licht einschalten"
+        },
+        "hint": {
+          "en": "Turn on the infrared light of your DoorBird for 3 minutes.",
+          "nl": "Zet het infrarood licht van je DoorBird aan voor 3 minuten.",
+          "de": "Schalten Sie das Infrarotlicht Ihrer DoorBird für 3 Minuten ein."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ],
+        "platforms": [
+          "local",
+          "cloud"
+        ]
+      },
+      {
+        "id": "restart",
+        "title": {
+          "en": "Restart",
+          "nl": "Herstarten",
+          "de": "Neu starten"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ],
+        "platforms": [
+          "local",
+          "cloud"
+        ]
+      },
+      {
+        "id": "door",
+        "title": {
+          "en": "Open the door",
+          "nl": "Open de deur",
+          "de": "Öffne die tür"
+        },
+        "hint": {
+          "en": "Open a connected door opener through the door opener / alarm output relay of the DoorBird.",
+          "nl": "Open een verbonden deur opener via de deur opener / alarm relais van de DoorBird.",
+          "de": "Öffnen Sie einen angeschlossenen türöffner über das Türöffner- / Alarmausgangsrelais der DoorBird."
+        },
+        "titleFormatted": {
+          "en": "Open the door with relay [[relay]]",
+          "nl": "Open de deur met relay [[relay]]",
+          "de": "Öffne die tür mit relay [[relay]]"
+        },
+        "args": [
+          {
+            "type": "autocomplete",
+            "name": "relay",
+            "title": {
+              "en": "Select Relay",
+              "nl": "Selecteer relais"
+            },
+            "placeholder": {
+              "en": "Select relay ...",
+              "nl": "Selecteer relais ..."
+            }
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "placeholder": {
+              "en": "Select DoorBird",
+              "nl": "Selecteer DoorBird",
+              "de": "DoorBird wählen"
+            },
+            "filter": "driver_id=doorbird|doorbird_cloud"
+          }
+        ]
+      }
+    ]
+  }
+}
