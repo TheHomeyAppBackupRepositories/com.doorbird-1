@@ -28,8 +28,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
           if (value === 1) {
             await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[0].id);
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[0].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -48,8 +52,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[1].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[1].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_2', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_2', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -68,8 +76,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[2].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[2].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_3', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_3', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -88,8 +100,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[3].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[3].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_4', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_4', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -108,8 +124,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[4].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[4].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_5', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_5', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -128,8 +148,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[5].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[5].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_6', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_6', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -148,8 +172,12 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[6].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[6].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_7', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return this.setCapabilityValue('open_action_7', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
@@ -168,14 +196,18 @@ class DoorbirdDeviceCloud extends OAuth2Device {
               await this.oAuth2Client.triggerRelay(this.getStoreValue('relays')[7].id, false);
             }
             await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: this.getStoreValue('relays')[7].id}, {});
-            setTimeout(async () => {
-              return this.setCapabilityValue('open_action_8', 0);
+            this.homey.setTimeout(async () => {
+              try {
+                return await this.setCapabilityValue('open_action_8', 0);
+              } catch (error) {
+                return Promise.reject(error);
+              }
             }, 1000);
           } else {
             return Promise.resolve(true);
           }
         } catch (error) {
-          return Promise.reject(error);
+          
         }
       });
 
@@ -253,13 +285,25 @@ class DoorbirdDeviceCloud extends OAuth2Device {
           await this.setCapabilityValue('alarm_generic', true);
           await this.doorbellCloudSnapShot.update();
           this.homey.flow.getDeviceTriggerCard('doorbell').trigger(this, {snapshot: this.doorbellCloudSnapShot}, {});
-          setTimeout(() => { this.setCapabilityValue('alarm_generic', false); }, 10000);
+          this.homey.setTimeout(async () => { 
+            try {
+              await this.setCapabilityValue('alarm_generic', false);
+            } catch (error) {
+              return Promise.reject(error);
+            }
+          }, 10000);
           return Promise.resolve(true);
         case 'motionsensor':
           await this.setCapabilityValue('alarm_motion', true);
           await this.motionsensorCloudSnapShot.update();
           await this.homey.flow.getDeviceTriggerCard('motionsensor').trigger(this, {snapshot: this.motionsensorCloudSnapShot}, {});
-          this.homey.setTimeout(async () => { await this.setCapabilityValue('alarm_motion', false); }, 5000);
+          this.homey.setTimeout(async () => {
+            try {
+              await this.setCapabilityValue('alarm_motion', false);
+            } catch (error) {
+              return Promise.reject(error);
+            }
+          }, 5000);
           return Promise.resolve(true);
         case 'relays':
           return await this.homey.flow.getDeviceTriggerCard('dooropen').trigger(this, {relay: relay}, {});

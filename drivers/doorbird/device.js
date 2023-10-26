@@ -11,11 +11,6 @@ class DoorbirdDevice extends Homey.Device {
     // INITIALLY SET DEVICE AS AVAILABLE
     this.setAvailable();
 
-    // TODO: REMOVE AFTER 3.1.0
-    if (this.getStoreValue('communication') !== 'local') {
-      this.setStoreValue('communication', 'local');
-    }
-
     // LISTENERS FOR UPDATING CAPABILITIES
     this.registerCapabilityListener('open_action', async (value) => {
       try {
